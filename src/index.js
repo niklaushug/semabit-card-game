@@ -9,13 +9,7 @@ const title = 'Semabit Card Game';
 
 const App = props => {
     const game = new Game()
-    console.log(game.getPlayers())
-
-    const player = new Player('Beat')
-    console.log(player.getPlayer())
-
-    const cards = new Cards()
-    cards.getHand()
+    game.getPlayers()
 
     return (
         <div>

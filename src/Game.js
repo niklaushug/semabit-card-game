@@ -1,11 +1,22 @@
+import Player from './Player'
+
 class Game {
-    constructor(players=['Alice', 'Bob', 'Carol', 'Hans']) {
-        this.rounds = 0;
-        this.players = players
+    constructor(players=['Alice', 'Bob', 'Carol']) {
+        this.rounds = 0
+        this.players = []
+        this.createPlayers(players)
+    }
+
+    createPlayers(players) {
+        players.map(player => {
+            this.players.push(new Player(player))
+        })
     }
 
     getPlayers() {
-        return this.players
+        this.players.map(player => {
+            console.log(player.getPlayer())
+        })
     }
 
     getRounds() {

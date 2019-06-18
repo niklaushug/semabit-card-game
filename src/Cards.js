@@ -11,7 +11,7 @@ class Cards {
     }
 
     getHand() {
-        console.log(`${this.hand} on hand`)
+        return `${this.hand.length} cards (${this.hand})`
     }
 }
 

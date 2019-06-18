@@ -1,7 +1,9 @@
+import Cards from './Cards'
+
 class Player {
     constructor(name) {
         this.name = name
-        this.cards = []
+        this.getCards()
     }
 
     rollDice() {
@@ -12,12 +14,12 @@ class Player {
         console.log('popCard')
     }
 
-    getCards(nr=5) {
-        console.log('getCards')
+    getCards() {
+        this.cards = new Cards()
     }
 
     getPlayer() {
-        console.log(`${this.name} holds ${this.cards.length} cards`)
+        return `${this.name} holds ${this.cards.getHand()}`
     }
 }
 
