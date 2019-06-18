@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Cards from './Cards'
 import Game from './Game'
 import Player from './Player'
 
@@ -12,6 +13,9 @@ const App = props => {
 
     const player = new Player('Beat')
     console.log(player.getPlayer())
+
+    const cards = new Cards()
+    cards.getHand()
 
     return (
         <div>
