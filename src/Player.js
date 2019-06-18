@@ -12,6 +12,7 @@ class Player {
 
     foldCard() {
         console.log('popCard')
+        this.cards.hand.pop()
     }
 
     getCards() {

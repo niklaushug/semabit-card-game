@@ -10,6 +10,10 @@ class Cards {
         this.hand.splice(indexToRemove, 1)
     }
 
+    foldCard() {
+        this.hand.pop()
+    }
+
     getHand() {
         return `${this.hand.length} cards (${this.hand})`
     }
