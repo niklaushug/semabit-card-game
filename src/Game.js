@@ -17,8 +17,7 @@ class Game {
     runGame() {
         this.rounds++
         this.players.map(player => {
-            console.log(player.getPlayer())
-            player.cards.foldCard()
+            player.rollDice()
             if (!this.winner && player.cards.hand.length === 0) {
                 this.winner = player.name
             }

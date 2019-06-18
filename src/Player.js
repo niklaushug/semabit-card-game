@@ -6,13 +6,18 @@ class Player {
         this.getCards()
     }
 
-    rollDice() {
-        console('rollDice()')
+    rollDice(variants=['red', 'blue', 'teal', 'fuchsia', 'green', 'purple']) {
+        const colorName = variants[Math.floor(Math.random() * variants.length)]
+        console.log('rollDice', colorName)
+        this.foldCard(colorName)
     }
 
-    foldCard() {
-        console.log('popCard')
-        this.cards.hand.pop()
+    foldCard(colorName) {
+        console.log('this.cards.hand', this.cards.hand)
+        const indexToRemove = this.cards.hand.indexOf(colorName)
+        if (indexToRemove >= 0) {
+            this.cards.hand.splice(indexToRemove, 1)
+        }
     }
 
     getCards() {
